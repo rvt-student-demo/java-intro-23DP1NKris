@@ -4,7 +4,13 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.print("Hello World!");
+        // Uzdevuma nosaukums
+        
+        String product = "Book";
+        int amount = 16;
+        boolean confirmed = true;
+        
+        System.out.print(product);
 
     }
 
