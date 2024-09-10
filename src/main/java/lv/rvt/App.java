@@ -15,11 +15,9 @@ public class App
         int amount = Integer.valueOf(scanner.nextLine());   
 
         System.out.println("Is the for sale? (true/false): ");
-        boolean confirmed = Boolean.valueOf(scanner.nextLine());
+        boolean avaliable = Boolean.valueOf(scanner.nextLine());
         
-        System.out.println("Name of the product: " + product);
-        System.out.println("Amount left: " + amount);
-        System.out.println("Avaliable: " + confirmed);
+        System.out.println("The " + product + " has " + amount + " items in stock. The product is currently avaliable for sale: " + avaliable + ".");
 
         scanner.close();
     }
