@@ -18,6 +18,12 @@ public class App {
         System.out.println("");
 
         printTriangle(4);
+        System.out.println("");
+
+        printTriangleTwo(4);
+        System.out.println("");
+
+        christmasTree(10);
 
         scanner.close();
     }
@@ -53,6 +59,30 @@ public class App {
                 System.out.print("*");
             }
             System.out.println("");
+        }
+    }
+
+    public static void printSpaces(int num) {
+        for (int i = 0; i < num; i++) {
+            System.out.print(" ");
+        }
+    }
+
+    public static void printTriangleTwo(int size) {
+        for (int i = 1; i <= size; i++) {
+            printSpaces(size - i);
+            printStars(i);
+        }
+    }
+
+    public static void christmasTree(int treeHeight) {
+        for (int i = 1; i <= treeHeight; i++) {
+            printSpaces(treeHeight - i);
+            printStars(2 * i - 1);
+        }
+        for (int i = 0; i < 2; i++) {
+            printSpaces(treeHeight - 2);
+            System.out.println("***");
         }
     }
 }
