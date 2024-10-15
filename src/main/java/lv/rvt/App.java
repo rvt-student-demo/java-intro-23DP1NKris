@@ -6,18 +6,20 @@ public class App {
     public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
         
-        ArrayList<String> names = new ArrayList<>();
-        String nameInput = "";
+        ArrayList<Integer> numbers = new ArrayList<>();
+        int numberInput;
 
         while (true) {
-            nameInput = scanner.nextLine();
-            if (nameInput.equals("")) {
+            numberInput = scanner.nextInt();
+            if (numberInput == 0) {
                 break;
             }
 
-            names.add(nameInput);
+            numbers.add(numberInput);
         }
-        System.out.println(names.get(2));
+        
+        System.out.println(numbers.get(1) + numbers.get(2));
+
         scanner.close();
     }
 }
