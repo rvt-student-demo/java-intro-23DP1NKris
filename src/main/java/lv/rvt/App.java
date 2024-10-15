@@ -18,7 +18,12 @@ public class App {
             numbers.add(numberInput);
         }
         
-        System.out.println(numbers.get(1) + numbers.get(2));
+        int sum = 0;
+        for (int i = 0; i < numbers.size(); i++) {
+            sum += numbers.get(i);
+        }
+
+        System.out.println(sum);
 
         scanner.close();
     }
