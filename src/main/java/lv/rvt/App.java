@@ -4,34 +4,25 @@ import java.util.*;
 public class App {
 
     public static void main(String[] args)  {
-        Scanner scanner = new Scanner(System.in);
-
         ArrayList<Integer> numbers = new ArrayList<>();
-        int numberInput;
+            numbers.add(3);
+            numbers.add(2);
+            numbers.add(6);
+            numbers.add(-1);
+            numbers.add(5);
+            numbers.add(1);
 
-        while (true) {
-            numberInput = scanner.nextInt();
-            if (numberInput == -1) {
-                break;
-            }
-            numbers.add(numberInput);
-        }
+            System.out.println("The numbers in the range [0, 5]");
+            printNumbersInRange(numbers, 0, 5);
 
-        while (true) {
-            System.out.println("From where?");
-            Integer start = scanner.nextInt();
-            System.out.println("To where?");
-            Integer end = scanner.nextInt();
-            if (start < 0 || end > numbers.size() || start >= end) {
-                System.out.println("Invalid input, input the values again");
-            } else {
-                for (int i = start; i < end; i++) {
-                    System.out.println(numbers.get(i));
-                }
-                break;
+            System.out.println("The numbers in the range [3, 10]");
+            printNumbersInRange(numbers, 3, 10);
+    }
+    public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
+        for (int number : numbers) {
+            if (number >= lowerLimit && number <= upperLimit) {
+                System.out.println(number);
             }
         }
-
-        scanner.close();
     }
 }
