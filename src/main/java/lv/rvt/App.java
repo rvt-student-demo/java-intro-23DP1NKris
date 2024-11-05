@@ -3,14 +3,10 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-        DecreasingCounter counter = new DecreasingCounter(100);
+        Agent bond = new Agent("James", "Bond");
+        bond.printAgent();
 
-        counter.printValue();
-
-        counter.reset();
-        counter.printValue();
-
-        counter.decrement();
-        counter.printValue();
+        Agent batman = new Agent("Bat", "Man");
+        batman.printAgent();
     }
 }
