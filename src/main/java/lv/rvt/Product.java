@@ -5,13 +5,13 @@ public class Product {
     private double productPrice;
     private int productQuantity;
 
-    public Product(String productName, double productPrice, int productQuantity) {
+    Product(String productName, double productPrice, int productQuantity) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.productQuantity = productQuantity;
     }
 
-    public void printProduct() {
+    void printProduct() {
         System.out.println(productName + ", price " + productPrice + ", " + productQuantity + " pcs");
     }
 }
