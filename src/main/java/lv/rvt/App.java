@@ -3,26 +3,35 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-        PaymentCard paulsCard = new PaymentCard(20);
-        PaymentCard mattsCard = new PaymentCard(30);
+        Scanner scanner = new Scanner(System.in);
 
-        paulsCard.eatHeartily();
-        mattsCard.eatAffordably();
+        Statistics allStatistics = new Statistics();
+        Statistics evenStatistics = new Statistics();
+        Statistics oddStatistics = new Statistics();
 
-        System.out.println("Paul: " + paulsCard);
-        System.out.println("Matt: " + mattsCard);
+        
+        while (true) {
+            int number = scanner.nextInt();
 
-        paulsCard.addMoney(20);
-        mattsCard.eatHeartily();
+            if (number == -1) {
+                break;
+            }
 
-        System.out.println("Paul: " + paulsCard);
-        System.out.println("Matt: " + mattsCard);
+            allStatistics.addNumber(number);
 
-        paulsCard.eatAffordably();
-        paulsCard.eatAffordably();
-        mattsCard.addMoney(50);
+            if (number % 2 == 0) {
+                evenStatistics.addNumber(number);
+            } else {
+                oddStatistics.addNumber(number);
+            }
+        }
 
-        System.out.println("Paul: " + paulsCard);
-        System.out.println("Matt: " + mattsCard);
+        scanner.close();
+
+        System.out.println("Count: " + allStatistics.getCount());
+        System.out.println("Sum: " + allStatistics.sum());
+        System.out.println("Average: " + allStatistics.average());
+        System.out.println("Sum of even numbers: " + evenStatistics.sum());
+        System.out.println("Sum of odd numbers: " + oddStatistics.sum());
     }
 }
