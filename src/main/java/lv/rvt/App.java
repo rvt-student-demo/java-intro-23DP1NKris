@@ -1,13 +1,28 @@
 package lv.rvt;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ArrayList<Person> persons = PersonManager.getPersonList();
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter your name:");
+        String name = scanner.nextLine();
+        System.out.println("Enter your age:");
+        int age = scanner.nextInt();
+        System.out.println("Enter your weight");
+        int weight = scanner.nextInt();
+        System.out.println("Enter your height");
+        int height = scanner.nextInt();
 
-        for (Person person : persons) {
-            System.out.println(person);
-        }
+        Person person = new Person(name, age, height, weight);
+        PersonManager.addPerson(person);
+        System.out.println("Thanks for registering!");
+
+        scanner.close();
+    }
+
+    public static void modify(Person person) {
+        person.setName("Modified!");
     }
 }
