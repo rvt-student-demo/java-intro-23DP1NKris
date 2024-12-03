@@ -8,10 +8,14 @@ public class Person {
     private int height;
 
     public Person(String name) {
+        this(name, 0, 0, 0);
+    }
+
+    public Person(String name, int age, int height, int weight) {
         this.name = name;
-        this.age = 0;
-        this.weight = 0;
-        this.height = 0;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
     }
 
     public String getName() {
@@ -20,6 +24,10 @@ public class Person {
 
     public int getAge() {
         return this.age;
+    }
+
+    public int getHeight() {
+        return this.height;
     }
 
     public void growOlder() {
@@ -34,13 +42,17 @@ public class Person {
         this.weight = newWeight;
     }
 
+    public void setName (String newName) {
+        this.name = newName;
+    }
+
     public double bodyMassIndex() {
-        double heightDivByHundred = this.height / 100.0;
-        return this.weight / (heightDivByHundred * heightDivByHundred);
+        double heightPerHundred = this.height / 100.0;
+        return this.weight / (heightPerHundred * heightPerHundred);
     }
 
     @Override
     public String toString() {
-        return this.name + ", age " + this.age + " years";
+        return this.name + ", age: " + this.age;
     }
 }
