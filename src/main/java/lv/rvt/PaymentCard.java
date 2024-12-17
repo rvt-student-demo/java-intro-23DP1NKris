@@ -11,8 +11,8 @@ public class PaymentCard {
         return this.balance;
     }
 
-    public void addMoney(double increase) {
-        this.balance = this.balance + increase;
+    public void addMoney(double amount) {
+        this.balance += amount;
     }
 
     public boolean takeMoney(double amount) {
