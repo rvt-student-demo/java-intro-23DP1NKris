@@ -1,24 +1,13 @@
 package lv.rvt;
 
 public class App {
-    public static void main(String[] args) {
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
-        System.out.println(unicafeExactum);
+        public static void main(String[] args) {
+            Box box1 = new Box(2.0, 3.0, 4.0);
+            Box box2 = new Box(5.0, 6.0, 7.0);
+    
+            boolean result = box1.nests(box2);
+            System.out.println("fits:" + result);
+    
 
-        PaymentCard annesCard = new PaymentCard(2);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        unicafeExactum.addMoneyToCard(annesCard, 100);
-
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        System.out.println(unicafeExactum);
     }
 }
