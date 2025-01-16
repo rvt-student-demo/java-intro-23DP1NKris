@@ -10,6 +10,7 @@ public class Person {
 
     public Person(String name, String adress) {
         this(name, 0, 0, 0, adress);
+        
     }
 
     public Person(String name, int age, int weight, int height, String address) {
