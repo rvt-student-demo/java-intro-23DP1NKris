@@ -17,7 +17,7 @@ public class Box {
         this.height = oldBox.height;
     }
 
-    public Box biggerBox (Box oldBox) {
+    public Box biggerBox(Box oldBox) {
         return new Box(1.25 * oldBox.length(), 1.25 * oldBox.width(), 1.25 * oldBox.height());
     }
 
@@ -49,15 +49,15 @@ public class Box {
         return length * width * height;
     }
 
-    private double faceArea() {
+    double faceArea() {
         return length * width;
     }
 
-    private double topArea() {
+    double topArea() {
         return width * height;
     }
 
-    private double sideArea() {
+    double sideArea() {
         return height * length;
     }
 }

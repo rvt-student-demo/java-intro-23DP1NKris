@@ -6,16 +6,18 @@ public class Person {
     private int age;
     private int weight;
     private int height;
+    private String address;
 
-    public Person(String name) {
-        this(name, 0, 0, 0);
+    public Person(String name, String adress) {
+        this(name, 0, 0, 0, adress);
     }
 
-    public Person(String name, int age, int height, int weight) {
+    public Person(String name, int age, int weight, int height, String address) {
         this.name = name;
         this.age = age;
         this.weight = weight;
         this.height = height;
+        this.address = address;
     }
 
     public String getName() {
@@ -32,6 +34,10 @@ public class Person {
 
     public int getWeight() {
         return this.weight;
+    }
+
+    public String getAdress() {
+        return this.address;
     }
 
     public void growOlder() {
@@ -57,10 +63,12 @@ public class Person {
 
     @Override
     public String toString() {
-        return this.name + ", age: " + this.age;
+        return name + "\n   " + address;
     }
 
     public String toCsvRow() {
         return name + ", " + age + ", " + height + ", " + weight;
     }
+
+
 }
