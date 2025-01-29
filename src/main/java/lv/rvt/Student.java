@@ -19,4 +19,9 @@ public class Student extends Person {
     public int study() {
         return credits += 1;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n   Study credits " + credits;
+    }
 }
