@@ -8,16 +8,8 @@ public class Student extends Person {
         this.credits = 0;
     }
 
-    public void play() {
-        this.credits -= 8;
-    }
-
-    public int credits() {
-        return this.credits;
-    }
-
-    public int study() {
-        return credits += 1;
+    public void study() {
+        this.credits++;
     }
 
     @Override

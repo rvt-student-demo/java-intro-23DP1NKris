@@ -1,6 +1,6 @@
 package lv.rvt;
 
-public class Teacher extends Person{
+public class Teacher extends Person {
     private int salary;
 
     public Teacher(String name, String address, int salary) {
@@ -8,13 +8,8 @@ public class Teacher extends Person{
         this.salary = salary;
     }
 
-    public int grade() {
-        return 10;
-    }
-
     @Override
     public String toString() {
         return super.toString() + "\n   salary " + salary + " euro/month";
     }
 }
-
