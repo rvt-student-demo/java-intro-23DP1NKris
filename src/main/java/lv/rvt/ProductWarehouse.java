@@ -1,6 +1,6 @@
 package lv.rvt;
 
-public class ProductWarehouse extends Warehousing {
+public class ProductWarehouse extends Warehouse {
     private String productName;
 
     public ProductWarehouse(String productName, double capacity) {
@@ -18,6 +18,6 @@ public class ProductWarehouse extends Warehousing {
 
     @Override
     public String toString() {
-        return "Product: " + productName + ", " + super.toString();
+        return productName+ ": " + super.toString();
     }
 }

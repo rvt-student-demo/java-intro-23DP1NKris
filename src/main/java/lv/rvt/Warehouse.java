@@ -1,10 +1,10 @@
 package lv.rvt;
 
-public class Warehousing {
+public class Warehouse {
     private double capacity;
     private double balance;
 
-    public Warehousing(double capacity) {
+    public Warehouse(double capacity) {
         this.balance = 0;
 
         if (capacity > 0) {
