@@ -30,7 +30,7 @@ public class ChangeHistory {
     public double minValue() {
         double min = history.get(0);
         for (double value : history) {
-            if (value > min) {
+            if (value < min) {
                 min = value;
             }
         }
