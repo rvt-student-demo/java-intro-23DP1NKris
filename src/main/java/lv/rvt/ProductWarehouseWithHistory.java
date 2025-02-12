@@ -1,25 +1,25 @@
 package lv.rvt;
 
-import java.lang.reflect.Array;
-
 public class ProductWarehouseWithHistory extends ProductWarehouse{
     private ChangeHistory history;
 
     public ProductWarehouseWithHistory(String productName, double capacity, double initialBalance) {
         super(productName, capacity);
         this.history = new ChangeHistory();
-        this.addToWarehouse(initialBalance);
+        super.addToWarehouse(initialBalance);
         this.history.add(initialBalance);
     }
 
     @Override
     public void addToWarehouse(double amount) {
         super.addToWarehouse(amount);
+        history.add(getBalance());
     }
 
     @Override
     public double takeFromWarehouse(double amount) {
         double takenAmount = super.takeFromWarehouse(amount);
+        history.add(getBalance());
         return takenAmount;
     }
 
