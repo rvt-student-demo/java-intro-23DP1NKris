@@ -44,6 +44,7 @@ public class ChangeHistory {
         }
         return sum / history.size();
     }
+    
 
     @Override
     public String toString() {
