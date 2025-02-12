@@ -15,7 +15,7 @@ public class ProductWarehouse extends Warehouse {
     public void setName(String productName) {
         this.productName = productName;
     }
-
+    
     @Override
     public String toString() {
         return productName+ ": " + super.toString();
